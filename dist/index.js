@@ -615,7 +615,7 @@ function merge(srcObj) {
  * @Author: 蒋文斌
  * @Date: 2021-01-24 20:45:25
  * @LastEditors: Do not edit
- * @LastEditTime: 2021-01-24 21:23:47
+ * @LastEditTime: 2021-01-26 16:00:59
  * @Description: 自动生成
  */
 
@@ -784,12 +784,17 @@ var src_MpAwesomeProgress = /*#__PURE__*/function () {
           duration = _ref$duration === void 0 ? 0.3 : _ref$duration;
       var oldVal = this._options.percentage;
 
+      if (value === oldVal) {
+        // 设置相同的值，不做处理
+        return;
+      }
+
       if (value >= 0 && value <= 100) {
         this.canvasInstance.cancelAnimationFrame(this.animationId);
         this._options.percentage = value;
         this.animateDrawArc(oldVal, value, 1, duration * 60);
       } else {
-        throw new Error("进度百分比的范围必须在1~100内");
+        throw new Error("进度百分比的范围必须在0~100内");
       }
     } // 利用raf控制动画绘制
 

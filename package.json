@@ -1,6 +1,6 @@
 {
   "name": "mp-awesome-progress",
-  "version": "0.1.3",
+  "version": "0.1.6",
   "description": "a progress component based on miniprogram and canvas, which supports customized animation and many attributes",
   "miniprogram": "dist",
   "main": "src/index.js",
@@ -40,7 +40,6 @@
     "eslint-import-resolver-webpack": "^0.11.1",
     "eslint-loader": "^3.0.4",
     "eslint-plugin-import": "^2.20.2",
-    "terser-webpack-plugin": "^5.1.1",
     "webpack": "^4.42.1",
     "webpack-bundle-analyzer": "^3.6.1",
     "webpack-cli": "^3.3.11",
